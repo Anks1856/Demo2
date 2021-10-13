@@ -11,14 +11,17 @@ module.exports = {
         lg: "992px",
         xl: "1440px",
       },
-     
+      borderRadius: {
+        small: "3px",
+        btn: "20px",
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
         blue: {
           dark: "#031e40",
           light: "#145DA0",
-          lighter : "#B6D1D4"
+          lighter: "#B6D1D4",
         },
         green: {
           light: "#e0ebe8",
@@ -41,11 +44,15 @@ module.exports = {
         grey: {
           light: "#CED3D9",
         },
+        red: {
+          light: "#FFFAF1",
+        },
       },
       height: {
         55: "552px",
         t10: "10px",
         t4: "2.4rem",
+        15: "60px",
       },
 
       width: {
@@ -64,7 +71,7 @@ module.exports = {
       },
 
       boxShadow: {
-        ct: "0 0 10px 0 #54657b",
+        ct: "0 0px 10px 0 #54657b",
         modal: "0 0 30px 0 #0a2342",
         cus: "0 0 5px 0 #d6dae0",
         clientbox: "0 0 10px 0 #d6dae0",
