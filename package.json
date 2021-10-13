@@ -1,0 +1,97 @@
+{
+  "name": "practice-portal-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build:tailwind": "tailwindcss -i src/styles/index.css -o src/styles/tailwind.css",
+    "watch:tailwind": "tailwindcss -i src/styles/index.css -o src/styles/tailwind.css --watch",
+    "start": " concurrently \"npm run watch:tailwind\" \"react-scripts start\"",
+    "prebuild": "DISABLE_ESLINT_PLUGIN=true NODE_ENV=production npm run build:tailwind",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --fix",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "gql": "graphql-codegen --config codegen.yml"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@graphql-codegen/cli": "1.21.3",
+    "@graphql-codegen/fragment-matcher": "2.0.1",
+    "@graphql-codegen/introspection": "1.18.1",
+    "@graphql-codegen/typescript": "1.21.1",
+    "@graphql-codegen/typescript-operations": "1.17.15",
+    "@graphql-codegen/typescript-react-apollo": "2.2.3",
+    "@types/apollo-upload-client": "^14.1.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-select": "^4.0.17",
+    "autoprefixer": "^10.3.4",
+    "eslint-config-prettier": "^7.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.3.6",
+    "prettier": "2.4.1",
+    "tailwindcss": "^2.2.11"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.4.10",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.0.0-rc.1",
+    "@mui/material": "^5.0.0-rc.1",
+    "@pathofdev/react-tag-input": "^1.0.7",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.23",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-paginate": "^7.1.1",
+    "antd": "4.16.13",
+    "antd-mask-input": "^0.1.15",
+    "apollo-upload-client": "^16.0.0",
+    "bootstrap": "^5.1.0",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "formik": "^2.2.9",
+    "graphql": "^15.5.2",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.4",
+    "react-dom": "^17.0.2",
+    "react-multi-select-component": "^4.1.10",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.2.1",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
+    "react-tag-autocomplete": "^6.2.0",
+    "react-toastify": "^8.0.2",
+    "typescript": "^4.4.2",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
+  }
+}

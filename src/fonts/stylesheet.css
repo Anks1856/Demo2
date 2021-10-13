@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans.eot");
+  src: url("OpenSans.eot?#iefix") format("embedded-opentype"),
+    url("OpenSans.woff2") format("woff2"), url("OpenSans.woff") format("woff"),
+    url("OpenSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("Merriweather.eot");
+  src: url("Merriweather.eot?#iefix") format("embedded-opentype"),
+    url("Merriweather.woff2") format("woff2"),
+    url("Merriweather.woff") format("woff"),
+    url("Merriweather.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  src: url("MerriweatherSans-Regular.eot");
+  src: url("MerriweatherSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("MerriweatherSans-Regular.woff2") format("woff2"),
+    url("MerriweatherSans-Regular.woff") format("woff"),
+    url("MerriweatherSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lucida Grande";
+  src: url("LucidaGrande.eot");
+  src: url("LucidaGrande.eot?#iefix") format("embedded-opentype"),
+    url("LucidaGrande.woff2") format("woff2"),
+    url("LucidaGrande.woff") format("woff"),
+    url("LucidaGrande.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Good Times Rg";
+  src: url("GoodTimesRg-Regular.eot");
+  src: url("GoodTimesRg-Regular.eot?#iefix") format("embedded-opentype"),
+    url("GoodTimesRg-Regular.woff2") format("woff2"),
+    url("GoodTimesRg-Regular.woff") format("woff"),
+    url("GoodTimesRg-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("SegoeUI.eot");
+  src: url("SegoeUI.eot?#iefix") format("embedded-opentype"),
+    url("SegoeUI.woff2") format("woff2"), url("SegoeUI.woff") format("woff"),
+    url("SegoeUI.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,153 @@
+.login-section {
+  padding: 15px;
+  background-color: #fff;
+  @include flex;
+  height: 100vh;
+  .Login_Wrapper {
+    width: 65%;
+    box-shadow: 0 2px 7px 7px #eeeeee80;
+    border-radius: 5px;
+    padding: 2rem;
+  }
+}
+.login-left {
+  background-color: #f7f8fc;
+  border: 1px solid #dae7ef;
+}
+.login-left {
+  color: $headingfont;
+  div {
+    padding: 235px 100px;
+    text-align: left;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 50px;
+      position: relative;
+      font-weight: $bold;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -11px;
+        width: 70%;
+        height: 5px;
+        background-color: $headingfont;
+        left: 0px;
+      }
+    }
+    h2,
+    h3 {
+      font-size: 18px;
+    }
+    h1 {
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      padding: 1.4rem 0 0;
+    }
+  }
+}
+
+.login-right {
+  padding-top: 6rem;
+  padding-left: 15%;
+  .login-title{
+    padding-bottom: 2rem;
+    text-align: $left;
+    width: 70%;
+  }
+  input {
+    width: 70%;
+    display: block;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    color: #3d3d3d;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .error_style {
+    border: 1px solid #e56773;
+  }
+  .error_message {
+    color: #e56773;
+  }
+  .error_message_div{
+      width:70%;
+  }
+  .forgot-div {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    margin-top: 20px;
+    input {
+      width: auto;
+      margin-right: 5px;
+      //       &:after{
+      //           width: 13px;
+      //           height: 13px;
+      //   background-color: #F0F0F0;
+      //   position: absolute;
+      //   content: "";
+
+      //       }
+      //   input [type="checkbox"]:after
+      //   {
+      //       display: none;
+      //   }
+    }
+    .forgot-password-div {
+      margin-left: 20px;
+      color: $headingfont;
+    }
+    .back-login-div {
+      margin-left: 20px;
+      color: $headingfont;
+    }
+  }
+  .backlogin-div {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: flex-end;
+    .back-login-div {
+      margin-left: 20px;
+      color: $headingfont;
+    }
+  }
+
+  .Validation-Wrp {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    .info-icon{
+        font-size: 13px;
+        margin-left: 3px;
+    }
+  }
+  .ProgressBar{
+      width: 70%;
+      height: 5px;
+  }
+
+  .signup-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin-top: 30px;
+    margin-right: 10px;
+    color: $headingfont;
+  }
+  .login-btn {
+    background-color: $headingfont;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin-top: 30px;
+    color: #fff;
+  }
+}

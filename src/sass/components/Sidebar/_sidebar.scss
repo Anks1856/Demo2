@@ -1,0 +1,129 @@
+.SideBar_Wrapper{
+    width: 240px;
+    background: $third1!important; 
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    // box-shadow: 3px 0 3px 1px #eeeeee78;
+    transition: all .3s ease-in-out;
+    z-index: 95;
+    top: 0;
+    aside{ 
+        .logo-wrp{
+            width: 100%;
+            text-align: center; 
+            height: 74px;
+            .logo{
+                @include flex;
+                height: 55px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                    height: 100%;
+                    padding: .4rem 0;
+                }
+            }
+        }
+        .Side-Items{
+            height: 100vh;
+            overflow: auto;
+            padding: 0 0 4rem;
+            @include scrollbar;
+            .item-unorder{
+                .Rotate .fab-icon-arrow{ 
+                    i{
+                        transform: rotate( 180deg );
+                        transition: $transition;
+                    }
+                } 
+                .active {
+                    background: #f6f7f9;  
+                    color: $primary1!important; 
+                    border-left: 4px solid #e2972e;
+                    i,h3{
+                        color: $primary1!important;
+                        font-weight: $bold;
+                    } 
+                }
+                .item-cmn01{ 
+                    color: $primary-black;
+                    display: grid;
+                    grid-gap:0 .8rem;
+                    width: 100%; 
+                    margin: 0 0 .18rem; 
+                    .fab-icon-arrow{
+                        i{
+                            font-size: 14px; color:$white;
+                            transition: $transition;
+                        }
+                    }
+                    .fab-icon{
+                        i{
+                            font-size: 14px; color: $white;
+                            transition: $transition;
+                        }
+                    }
+                    h3{
+                        font-size: 14px;
+                        color: #fff;
+                        @include textkit;
+                        font-weight: 400;
+                        transition: $transition;
+                    } 
+                  a{
+                    padding: .5rem 0;
+                    &:hover{
+                        .fab-icon{
+                            i{
+                               transform: scale(1.082); 
+                               transition: $transition;
+                            }
+                        }
+                        h3{
+                            font-weight: 500;
+                            transition: $transition;
+                        }
+                    }
+                  }
+                  .item-anchor{ 
+                    display: grid; 
+                    // grid-template-columns: 20px 1fr;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    width: 100%;
+                    font-size: 14px;  
+                    .dash-item{
+                        display: grid; 
+                        grid-template-columns: 20px 1fr;
+                        align-items: center;
+                        grid-gap: .5rem;
+                        width: 100%;
+                        font-size: 14px;
+                        padding-left:1rem;
+                    }
+                  }
+
+                  .item-anchor-wrp{ 
+                    .dash-item{
+                    display: grid; 
+                    grid-template-columns: 20px 1fr 20px;
+                    align-items: center;
+                    grid-gap: .5rem;
+                    padding-left:1rem;
+                    }
+                  }
+
+                  .Arcodian-Wrapper{
+                      li{
+                          list-style-type: $none;
+                          margin: 0 0 .18rem;
+                          a{
+                            padding: .5rem 0; 
+                          }
+                      }
+                  }
+               }
+            } 
+        }
+    }
+}

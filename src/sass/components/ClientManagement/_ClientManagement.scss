@@ -1,0 +1,682 @@
+.Main_Content_Wrapper {
+  // <<<<<------------***ClientPage***---------->>>>>
+  .Clientlist_Wrapper {
+    .Heading_Title {
+      h3 {
+        font-size: 1.1em;
+        text-transform: $cap;
+        @include textkit;
+        color: $heading;
+        font-weight: $bold;
+      }
+      p {
+        font-size: 0.85em;
+        text-transform: $cap;
+        @include textkit;
+        color: $heading;
+        margin-bottom: 0.2rem;
+        padding: 0.2rem 0 0.2rem;
+        // border-bottom: 1px solid $border;
+      }
+    }
+
+    .Search_wrapper {
+      margin: 1rem 0 0;
+      .search-cmn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .S-child-item1 {
+          position: relative;
+          span.Search_icon {
+            position: absolute;
+            right: 12px;
+            transform: translate(-7px, 11px);
+            transition: $transition;
+            i {
+              color: #dad8d8;
+              font-size: 1.1em;
+              transition: $transition;
+              cursor: pointer;
+              &:hover {
+                color: #999;
+                transition: $transition;
+              }
+            }
+          }
+          &:hover {
+            .Search_icon {
+              i {
+                transition: $transition;
+                transform: scale(1.099);
+              }
+            }
+          }
+        }
+        li {
+          width: 100%;
+          list-style-type: $none;
+          label {
+            width: 100%;
+            input {
+              padding: 0.5rem;
+              border: 1px solid #bdbdbd;
+              border-radius: 5px;
+              background: #fff;
+              width: 100%;
+              text-overflow: ellipsis;
+              outline: $none;
+              transition: $transition;
+              color: #444;
+              &:hover,
+              &:focus,
+              &:active {
+                border-color: #999;
+                transition: $transition;
+                .Search_icon {
+                  i {
+                    transition: $transition;
+                    transform: scale(1.099);
+                  }
+                }
+              }
+              &:focus {
+                box-shadow: 0 1px 3px 2px #eee9;
+                border-color: #99999982;
+                transition: $transition;
+              }
+              &::placeholder {
+                font-size: 12px;
+                color: rgba(153, 153, 153, 0.76);
+                transition: $transition;
+              }
+            }
+          }
+        }
+        .client-btn {
+          text-align: $ryt;
+          button {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background: #079de8;
+            color: #fff;
+            font-size: 0.9em;
+            @include textkit;
+            transition: $transition;
+            &:focus {
+              transition: $transition;
+              box-shadow: 0 0 0 0.25rem #079de821;
+            }
+            &:hover {
+              transition: $transition;
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+
+    // -------Table-----//
+    .Table_Wrapper {
+      // @include Table;
+      margin: 2rem 0 0;
+    }
+    //--------Table--End--here---//
+  }
+  .Breadcumb {
+    .Breadcumb_Unorder {
+      li {
+        list-style-type: $none;
+        @include flex;
+        justify-content: $flexstart;
+        grid-gap: 0.5rem;
+        margin: 0.2rem 0 0.3rem;
+        a {
+          text-decoration: $none;
+          font-size: 0.95em;
+          text-transform: $cap;
+          @include textkit;
+          color: $headingfont;
+          transition: $transition;
+          &:hover {
+            transition: $transition;
+            opacity: 0.89;
+            transform: scale(1.011);
+          }
+        }
+        // a.active {s
+        //     text-decoration: underline!important;
+        //     font-weight: bold;
+        // }
+        .Arrow-icon {
+          i.fas.fa-chevron-right {
+            font-size: 11px;
+            color: $headingfont;
+          }
+        }
+      }
+    }
+  }
+  // <<<<<------------***-----ClientPage--End---here***---------->>>>>
+
+  // <<<<<------------***------DashboardPage----***---------->>>>>
+  .Dashboard_Wrapper {
+    .Dash-Heading {
+      h2 {
+        font-size: 1.3em;
+        text-transform: $cap;
+        @include textkit;
+        color: $heading;
+        font-weight: $bold;
+      }
+    }
+    .Dashboard_Content {
+      .Dashboard_Unorder {
+        display: $grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem 1.5rem;
+        align-items: $mid;
+        li {
+          background: $white;
+          border-radius: 5px;
+          padding: 0.8rem 1rem;
+          margin: 1rem 0;
+          list-style-type: $none;
+          box-shadow: 0px 0 6px 2px #eeeeee80;
+          .item-heading {
+            @extend .Dash-Heading;
+            h2 {
+              font-size: 0.99em !important;
+              color: #000;
+              padding-bottom: 0.9rem;
+              border-bottom: 1px solid #eee9;
+            }
+          }
+          figcaption {
+            margin: 0.5rem 0;
+            .Tamount {
+              font-size: 0.8em;
+              @include textkit;
+              text-transform: $cap;
+              color: #999999b8;
+            }
+            .Bit_group {
+              display: grid;
+              grid-template-columns: max-content 1fr;
+              grid-gap: 1rem;
+              align-items: $mid;
+              margin: 0.7rem 0;
+              img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+              }
+              .Bit-amount {
+                font-size: 1.299em;
+                font-weight: $bold;
+                color: #000;
+                text-transform: $cap;
+              }
+            }
+            .Transaction {
+              padding: 0.2rem 0;
+              i {
+                font-size: 0.89em;
+                color: $headingfont;
+                padding-right: 0.4rem;
+                font-weight: normal;
+              }
+              span {
+                font-size: 0.79em;
+                text-transform: $cap;
+                @include textkit;
+                color: $headingfont;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .Dashbord-SubWrapper {
+      margin: 0.5rem 0 0;
+      .Table_Wrapper {
+        .ReactTable {
+          .rt-tbody {
+            // height: 250px;
+          }
+        }
+      }
+      .Client_Approvals {
+        margin: 1rem 0 0;
+        .Approve_Heading {
+          padding: 0.9rem 0.5rem;
+          background: #f9f9f9;
+          box-shadow: 0 2px 2px 1px #eee;
+          h2 {
+            font-size: 1em;
+            text-transform: $cap;
+            color: #000;
+            font-weight: 600;
+            @include textkit;
+          }
+        }
+        .Table_Wrapper {
+          margin: 0.8rem 0 0;
+          .ReactTable .rt-table .rt-thead.-header {
+            background: #e6eafc;
+            color: #000;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 4px 0px 4px 2px #02020224;
+          }
+        }
+      }
+    }
+  }
+
+  // <<<<<------------***DashboardPage--End---here***---------->>>>>
+
+  // <<<<<------------***-----ClientDetail-----***---------->>>>>
+  .ClientDetail {
+    .Action_Wrapper {
+      grid-gap: 0 !important;
+    }
+    .Heading_Wrapper {
+      @include flex;
+      justify-content: $between;
+      .Search_wrapper {
+        width: 35%;
+        .search-cmn {
+          grid-template-columns: 1fr max-content;
+          grid-gap: 1rem;
+        }
+      }
+    }
+    .Client_Approvals {
+      .Table_Wrapper {
+        margin: 0.5rem 0 0;
+      }
+      .Approve_Heading {
+        padding: 0.3rem 0 0.3rem 1rem;
+        background: #f9f9f9;
+        box-shadow: 0 0px 6px 3px #eee;
+        border-radius: 5px;
+        margin: 1rem 0 0;
+        display: $grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: $between;
+        align-items: $mid;
+        grid-gap: 0.5rem;
+        // cursor: pointer;
+        h2 {
+          font-size: 1.039em;
+          text-transform: capitalize;
+          color: #005799;
+          font-weight: 600;
+          @include textkit;
+        }
+      }
+      .Heading-Btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          display: grid;
+          align-items: center;
+          grid-template-columns: repeat(2, max-content);
+          // grid-gap: 1rem;
+          text-decoration: $none;
+          button {
+            outline: $none;
+            border: $none;
+            border-radius: 5px;
+            background: $headingfont;
+            color: $white;
+            @include textkit;
+            transition: $transition;
+            padding: 0.5rem 0.7rem;
+            font-size: 0.89em;
+            &:hover {
+              transition: $transition;
+              opacity: 0.89;
+            }
+          }
+          .toggleHeading {
+            width: 50px;
+            height: 50px;
+            @include flex;
+          }
+          .fab-icon {
+            width: 100%;
+            height: 100%;
+            @include flex;
+            & > i {
+              font-size: 1.1em;
+              font-weight: $bold;
+              color: $headingfont;
+              transition: $transition;
+              width: 33px;
+              height: 33px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: $transition;
+              &:focus,
+              &:active {
+                box-shadow: 0px 0px 6px 4px #079de821;
+                transition: $transition;
+              }
+              &:hover {
+                transition: $transition;
+                opacity: 0.89;
+                //  box-shadow: 0px 0px 6px 4px #eee;
+              }
+            }
+          }
+          .Rotate > span > i,
+          .OrderRotate > span > i,
+          .InfoRotate > span > i,
+          .NoteRotate > span > i {
+            transform: rotate(180deg);
+            transition: $transition;
+          }
+        }
+      }
+    }
+    .Table_Wrapper {
+      .ReactTable {
+        .rt-table {
+          background: $white;
+        }
+      }
+      .Action_Wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-gap: 1rem;
+        i {
+          font-size: 1.1em;
+          padding: 0.6rem;
+          border-radius: 50%;
+          transition: $transition;
+          &:hover {
+            transition: $transition;
+            background: #079de81c;
+          }
+        }
+      }
+    }
+    //    <<<<<<<-----Info---section----->>>>>>>>
+    .Info_Wrapper {
+      .Info_Content_Wrapper {
+        background: #fff;
+        padding: 2rem 1rem 1rem;
+        margin: 0.5rem 0 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 3px #eee;
+        .Info_Unorder {
+          display: $grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem 2rem;
+          li {
+            list-style-type: $none;
+            .Info_Heading {
+              h3 {
+                font-size: 0.9em;
+                text-transform: $cap;
+                @include textkit;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #eee;
+                font-weight: $bold;
+              }
+            }
+            .Contact-info {
+              li {
+                list-style-type: $none;
+                display: $grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+                border-bottom: 1px solid #eee;
+                padding: 0.6rem 0;
+                &:last-child {
+                  border: $none !important;
+                }
+                label {
+                  width: 100%;
+                  p {
+                    font-size: 0.82em;
+                    text-transform: $cap;
+                    @include textkit;
+                    color: #555;
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+          .Info-item2 {
+            position: relative;
+            .Info_Heading {
+              position: relative;
+              .Edit-btn {
+                position: absolute;
+                right: 0;
+                bottom: 0.5rem;
+                font-size: 0.89em;
+                text-transform: $cap;
+                border: 1px solid #ccc;
+                padding: 0.3rem 0.9rem;
+                border-radius: 5px;
+                color: #555;
+                font-weight: 500;
+                transition: $transition;
+                &:hover,
+                &:focus,
+                &:active {
+                  transition: $transition;
+                  background: $heading;
+                  border-color: $headingfont;
+                  color: $white;
+                }
+              }
+            }
+          }
+          .Info-item3,
+          .Info-item4 {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 1rem;
+            // position: relative;
+            .Info_Heading {
+              h3 {
+                border-bottom: $none !important;
+              }
+            }
+            address {
+              margin-bottom: 0;
+              position: relative;
+              p {
+                font-size: 0.9em;
+                text-transform: $cap;
+                @include textkit;
+                color: #555;
+                margin-bottom: 0;
+              }
+            }
+            .Edit-btn {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              font-size: 0.89em;
+              text-transform: $cap;
+              border: 1px solid #ccc;
+              padding: 0.3rem 0.9rem;
+              border-radius: 5px;
+              color: #555;
+              font-weight: 500;
+              transition: $transition;
+              &:hover,
+              &:focus,
+              &:active {
+                transition: $transition;
+                background: $heading;
+                border-color: $headingfont;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    //    <<<<<<<-----Info---section--end--->>>>>>>>
+  }
+
+  // <<<<<------------***-----ClientDetail--End---here***---------->>>>>
+}
+
+.patient-ul {
+  margin: 20px 10px !important;
+  li {
+    font-size: 16px !important;
+    i {
+      margin-right: 8px;
+    }
+  }
+}
+.full-width {
+  width: 100% !important;
+}
+.common-box-shadow {
+  box-shadow: 0 0 10px 0 #d6dae0;
+}
+.order-history-box {
+  display: flex;
+  padding: 10px 20px;
+  margin: 20px 15px;
+}
+.ml-auto {
+  margin-left: auto;
+}
+// Edit popup css
+.edit-popup {
+  label {
+    display: inline-block;
+  }
+  input,
+  select {
+    border: 1px solid $third1;
+    border-radius: 3px;
+    padding: 2px 15px;
+  }
+  input {
+    width: 70%;
+  }
+  .edit-row {
+    display: flex;
+    margin-bottom: 10px;
+    label {
+      width: 22%;
+      text-align: right;
+      margin-right: 3%;
+      font-weight: $bold;
+      color: $darkblack;
+    }
+  }
+  .phone-row {
+    input {
+      width: 51%;
+      border-radius: 0px 3px 3px 0px;
+    }
+    select {
+      border-right: 0px;
+      border-radius: 3px 0px 0px 3px;
+    }
+  }
+  .action-btns {
+    text-align: right;
+    margin-right: 5%;
+    .common-btn {
+      padding: 7px 30px;
+    }
+  }
+}
+.address-label {
+  width: 25%;
+  padding-right: 9%;
+  text-align: right;
+  label {
+    width: auto;
+  }
+}
+.address-right {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  select {
+    border-radius: 0px;
+  }
+  .address-row1 {
+    display: flex;
+    width: 100%;
+    input {
+      // margin-left: 1%;
+      width: 73%;
+      border-radius: 0px 3px 3px 0px;
+    }
+    select {
+      border-radius: 3px 0px 0px 3px;
+      border-right: 0px;
+    }
+  }
+  .address-row2 {
+    display: flex;
+    #text-1 {
+      width: 30%;
+      border-radius: 3px 0px 0px 3px;
+      border-top: 0;
+      border-right: 0px;
+    }
+    #text-2 {
+      width: 30%;
+      border-radius: 0px 3px 3px 0px;
+      border-top: 0;
+      border-left: 0px;
+    }
+    select {
+      border-top: 0;
+      border-radius: 0px;
+      border-left: 0px;
+      border-right: 0px;
+    }
+    .css-2b097c-container {
+      width: 40%;
+      border: none;
+    }
+  }
+}
+
+// Edit popup css
+
+.usersection {
+  .input-section {
+    display: flex;
+    input {
+      width: 100%;
+    }
+    .search-btn {
+      height: 40px;
+    }
+    .user-btn {
+      width: 150px;
+    }
+  }
+}
+
+.Commn_Modal {
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}

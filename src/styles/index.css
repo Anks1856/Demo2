@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~antd/dist/antd.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply font-bodyCommon text-sm bg-dark-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+label,
+li,
+option,
+select {
+  @apply font-bodyCommon;
+}
+
+a {
+  @apply no-underline;
+}
+
+::selection {
+  @apply text-white  bg-green-dark;
+}
+
+.ant-btn-primary {
+  @apply bg-green-dark focus:bg-green-dark hover:opacity-95;
+}
+.Login_Wrapper .Login_btn {
+  @apply bg-blue-dark;
+}
+
+.ant-btn:hover,
+.ant-btn:focus,
+.ant-btn:active {
+  @apply bg-dark-label;
+}
+.ant-checkbox {
+  @apply hover:bg-green-dark;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  @apply bg-green-dark border-green-200;
+}
+
+.ant-modal-mask {
+  @apply bg-dark-modalShadow;
+}
+.ant-modal {
+  @apply shadow-modal pb-0;
+}
+
+.Account_Modal .ant-modal-content {
+  @apply py-4 px-8 rounded-lg;
+}
+.Account_Modal .ant-modal-header {
+  @apply border-none;
+}
+.ant-form .ant-input::placeholder {
+  @apply font-bodyCommon;
+}
+
+.Account_Modal .ant-form .ant-input {
+  @apply bg-white py-2 rounded placeholder-gray-500 border-gray-500 hover:border-blue-dark focus:border-blue-dark;
+}
+
+.Account_Modal input#account_vetLicense,
+.Account_Modal input#account_DEALicense {
+  @apply border-none focus:shadow-none outline-none;
+}
+
+.Account_Modal .ant-form .ant-input-group-addon {
+  @apply bg-white  rounded placeholder-gray-500 border-gray-500 hover:border-blue-dark focus:border-blue-dark
+  capitalize rounded-tr-none rounded-br-none px-2;
+}
+.Account_Modal input#account_DEA_license_date {
+  @apply rounded-tl-none rounded-bl-none;
+}
+.Location_Setting_Wrapper .ant-form .ant-select-selector {
+  @apply hover:border-blue-dark focus:border-blue-dark bg-white capitalize border-gray-500 flex items-center
+  h-9 rounded;
+}
+.profile-Form .ant-form .profile_title .ant-select-selector {
+  @apply hover:border-blue-dark focus:border-blue-dark bg-white capitalize border-gray-500 flex items-center
+  h-10 rounded;
+}
+
+.Location_Setting_Wrapper .ant-form input#location {
+  @apply placeholder-gray-500 capitalize py-3;
+}
+.Location_Setting_Wrapper .ant-select-selection-placeholder {
+  @apply text-gray-500;
+}
+
+.Account_Modal .ant-form input#account_phone {
+  @apply rounded-tl-none rounded-bl-none;
+}
+
+.Account_Modal .ant-modal-title {
+  @apply text-xl text-dark-textColor capitalize font-bold font-primaryFont;
+}
+.profile-Form .ant-form #account_DEA_license {
+  @apply rounded-tl-none rounded-bl-none;
+}
+.Account_Modal .anticon-close {
+  @apply text-xl text-dark-textColor capitalize font-bold;
+}
+
+.Account_Modal .Form_wrapper form label,
+.profile-Form form label {
+  @apply text-sm  font-bold capitalize text-dark-label;
+}
+
+.Profile_Wrapper #upload {
+  @apply inline-block absolute z-10 w-full h-auto cursor-pointer opacity-0 inset-0;
+}
+
+.Account_Modal .Form_wrapper form .ant-input[disabled],
+.profile-Form form .ant-input[disabled] {
+  @apply bg-dark-grey1;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  @apply text-green-dark hover:text-green-500 transition-all;
+}
+.ant-tabs-tab {
+  @apply hover:text-green-dark transition-all;
+}
+
+.ant-tabs-ink-bar {
+  @apply bg-green-dark;
+}
+
+.VetRt .ant-input-group-addon:last-child {
+  @apply rounded-tl-none  rounded-bl-none rounded-tr-md rounded-br-md;
+}
+.Profile-tooltip-content::before {
+  @apply w-2.5 h-t10 bg-green-dark absolute -top-3 transform rotate-45;
+}
+.dropdown-wrp:hover .Profile-tooltip {
+  @apply block;
+}
+
+.Sidebar_layout .ant-menu-item a,
+.ant-menu-submenu .ant-menu-submenu-arrow {
+  @apply text-white;
+}
+.ant-menu-submenu .ant-menu-submenu-arrow:hover {
+  @apply text-indigo-100;
+}
+.Sidebar_layout .ant-menu-sub.ant-menu-inline {
+  @apply bg-dark-shadow text-white font-bold capitalize;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  @apply bg-white;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected a,
+.ant-menu:not(.ant-menu-horizontal)
+  .ant-menu-item-selected
+  .ant-menu-item-icon {
+  @apply text-dark-textColor font-bold;
+}
+.Sidebar_layout .ant-menu-inline .ant-menu-item::after {
+  @apply left-0 right-auto border-r-4 border-solid border-orange-bold;
+}
+
+.ant-layout-sider-trigger {
+  @apply top-0 bg-dark-shadow bottom-auto;
+}
+
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-light .ant-menu-submenu-active,
+.ant-menu-light .ant-menu-submenu-title:hover {
+  @apply text-indigo-100;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  @apply border-none;
+}
+
+.menu-button:focus,
+.menu-button:hover,
+.menu-button:active {
+  @apply bg-transparent shadow-none border-none outline-none text-transparent;
+}
+
+.Account_Modal .ant-form-item {
+  @apply mb-2;
+}
+
+.ant-menu-vertical .menu-button {
+  @apply ml-7;
+}
+
+.Main_PracticeSearch .Tab_Wrapper .Input-item {
+  @apply grid grid-cols-gridMax2;
+}
+
+.Main_PracticeSearch
+  .Tab_Wrapper
+  .Input-item
+  .ant-form-item-control-input-content
+  .ant-input {
+  @apply rounded-tr-none rounded-br-none rounded-tl-sm  
+  rounded-bl-sm border border-solid border-dark-textColor h-9 text-base border-r-0 transition-all
+  focus:shadow focus:border-dark-textColor  hover:border-blue-dark;
+}
+.Main_PracticeSearch
+  .Tab_Wrapper
+  .Input-item
+  .ant-form-item-control-input-content
+  .ant-input::placeholder {
+  @apply text-dark-shadow text-sm font-OpenSans capitalize;
+}
+.Main_PracticeSearch .Tab_Wrapper .Input-item .search-btn {
+  @apply bg-dark-textColor !important;
+}
+
+.Main_PracticeSearch .Tab_Wrapper .Input-item .search-btn:hover {
+  @apply border border-solid border-dark-textColor;
+}
+
+.Main_PracticeSearch .Tab_Wrapper .ant-tabs {
+  @apply flex-col-reverse;
+}
+
+.Main_PracticeSearch .Tab_Wrapper .ant-form-item-explain-error {
+  @apply text-sm pt-1;
+}
+
+.Main_PracticeSearch .ant-tabs .ant-tabs-nav {
+  @apply m-0 justify-center;
+}
+.Main_PracticeSearch .ant-tabs .ant-tabs-nav::before {
+  @apply content-none;
+}
+.Main_PracticeSearch .ant-tabs .ant-tabs-nav .ant-tabs-nav-wrap {
+  @apply justify-center;
+}
+
+.Main_PracticeSearch
+  .ant-tabs
+  .ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list {
+  @apply mt-8;
+}
+
+.Main_PracticeSearch
+  .ant-tabs
+  .ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab {
+  @apply py-2 px-4 text-sm capitalize border border-solid border-dark-textColor
+   text-dark-textColor transition-all m-0 hover:opacity-95;
+}
+
+.Main_PracticeSearch
+  .ant-tabs
+  .ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab:nth-child(1) {
+  @apply rounded-tr-none rounded-br-none border-r-0;
+}
+
+.Main_PracticeSearch
+  .ant-tabs
+  .ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-tab:nth-child(2) {
+  @apply rounded-tl-none rounded-bl-none;
+}
+
+.Main_PracticeSearch
+  .ant-tabs
+  .ant-tabs-nav
+  .ant-tabs-nav-wrap
+  .ant-tabs-nav-list
+  .ant-tabs-ink-bar {
+  @apply rounded-sm bg-dark-textColor z-1 transition-all hover:opacity-90 h-t4;
+}
+
+.Main_PracticeSearch .ant-tabs .ant-tabs-tab-active {
+  @apply transition-all hover:opacity-95;
+}
+
+.Main_PracticeSearch .ant-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  @apply text-white;
+}
+
+/* bharat */
+
+.clientprofile-modal .ant-form .ant-input {
+  @apply bg-white py-2 rounded placeholder-gray-500 border-gray-500 hover:border-blue-dark focus:border-blue-dark;
+  /* capitalize */
+}
+.clientprofile-modal label {
+  @apply text-sm  font-bold capitalize text-dark-label;
+}
+.clientprofile-modal .ant-modal-body {
+  @apply pr-12 pl-0;
+}
+.ant-input-group-addon .button {
+  @apply left-0;
+  @apply bg-dark-textColor;
+}
+.ant-switch-checked {
+  @apply bg-dark-textColor;
+}
+
+.ant-input-search .ant-input:hover,
+.ant-input-search .ant-input:focus {
+  @apply border-transparent;
+}
+
+.client_Search button {
+  @apply bg-blue-dark border border-solid border-dark-textColor text-white hover:opacity-90;
+}
+.client_Search .ant-input-group-addon:last-child {
+  @apply left-0 !important;
+}
+
+.client_Search .ant-input-group-addon:last-child button {
+  @apply border-none border-transparent;
+}
+.custom-address
+  .ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  @apply pt-2 pb-2;
+}
+
+.clientprofile-modal .ant-form .ant-input:focus {
+  @apply border-dark-textColor shadow-none;
+}
+
+.state-select .ant-select-selector {
+  @apply border-dark-shadow  rounded-none border-l-0 border-r-0 border-t-0;
+}
+
+.common-btn:active,
+.common-btn:focus {
+  @apply bg-blue-dark border border-solid border-dark-textColor text-white hover:opacity-90;
+}
+
+.Address_Select1 .ant-select-selector {
+  @apply h-10 flex items-center border border-solid  border-dark-shadow rounded-none border-r-0 border-l-0 !important;
+}
+
+.custom-address .ant-row:first-child .ant-input {
+  @apply rounded-tr-none rounded-br-none;
+}
+
+.custom-address .ant-row:last-child .ant-input {
+  @apply rounded-tl-none rounded-bl-none;
+}
+
+.custom-address .ant-row:first-child .ant-input {
+  @apply rounded-tr-none rounded-br-none;
+}
+
+.custom-address .ant-row:last-child .ant-input,
+.edit-phone-input {
+  @apply rounded-tl-none rounded-bl !important;
+}
+
+.clientprofile-modal .ant-input-group-addon {
+  @apply bg-white border-dark-shadow;
+}
+
+.edit-phone-input input {
+  @apply rounded-tl-none rounded-bl-none !important;
+}
+
+.edit-phone-input .ant-input-group-addon {
+  @apply rounded  rounded-tr-none rounded-br-none !important;
+}
+
+/* end--code */

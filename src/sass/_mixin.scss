@@ -1,0 +1,281 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin sidebar {
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  box-shadow: 3px 0 3px 1px #eeeeee78;
+}
+
+@mixin textkit {
+  word-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    transition: $transition;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #0a2342;
+    transition: $transition;
+    border-radius: 10px;
+    &:hover {
+      background: #0a2342b2;
+      transition: $transition;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 1px 4px 2px #0134755c;
+  }
+}
+
+@mixin fade {
+  @keyframes opi {
+    0% {
+      transition: $transition;
+      opacity: 0;
+    }
+    100% {
+      transition: $transition;
+      opacity: 1;
+    }
+  }
+}
+
+.ant-form-item-explain.ant-form-item-explain-error > div {
+  font-size: 12px;
+  padding: 0.3rem 0;
+}
+
+.btn-check:active + .btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem #7d808412 !important;
+}
+
+.swal-button {
+  background: #1d1d1b;
+  transition: all 0.3s ease-in-out;
+  &:not([disabled]):hover {
+    background-color: #000000;
+  }
+  &:hover {
+    opacity: 0.77;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// ---alert----
+.swal-modal {
+  .swal-footer {
+    .swal-button--cancel {
+      background: #e53e3e;
+      color: #fff;
+    }
+    .swal-button--confirm {
+      color: #fff;
+      background: #079de8;
+    }
+  }
+}
+
+// ------------checkbox---//
+
+@mixin checkbox {
+  .form-check-input {
+    border-color: #0a2342;
+    &:focus {
+      border-color: #0a2342;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem #0a23421a;
+    }
+    // &:checked{
+    //     background: #0a2342;
+    // }
+  }
+  .form-check-input:checked {
+    background-color: #0a2342;
+    border-color: #0a2342;
+  }
+  .form-check-label {
+    text-transform: $cap;
+    font-size: 1em;
+    font-weight: $bold;
+    @include textkit;
+    word-spacing: 0.3px;
+    color: #0a2342;
+  }
+}
+
+// ----end---checkbox---//
+
+// ----Password-style---->>>
+@mixin PasswordStyle {
+  .ant-input-affix-wrapper {
+    border-radius: 3px;
+    border: 1px solid $shadow;
+    border-color: $shadow;
+    transition: $transition;
+    background: $white;
+    font-family: $regular;
+    padding: 0.4rem 1rem;
+    &::placeholder {
+      color: #54657b;
+      font-size: 0.75em;
+      text-transform: $cap;
+      font-weight: 400;
+      font-family: "Open Sans";
+    }
+    &:hover {
+      border: 1px solid #031e40;
+      transition: $transition;
+    }
+    &:focus,
+    &:active {
+      transition: $transition;
+      box-shadow: 0 0 3px 0.25rem #54657b21;
+    }
+    input {
+      border: none !important;
+      outline: none;
+      padding: 0 !important;
+      &:hover,
+      &:focus,
+      :active,
+      :focus-within,
+      :focus-visible {
+        border: none !important;
+        outline: none;
+      }
+    }
+  }
+}
+
+// ----Password-style--->>>
+
+// ----alert---end--here--//
+
+.invalid-feedback {
+  margin-top: 0.45rem !important;
+  font-size: 0.675em !important;
+  word-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather Sans"; //'Poppins','SansSerif'
+  // margin: 0;
+  // margin-bottom: 0rem !important;
+  // padding: 0;
+}
+// ul,
+// ol {
+//   margin-bottom: 0 !important;
+//   padding-left: 0 !important;
+// }
+
+p,
+span,
+a,
+label,
+li,
+option,
+select {
+  font-family: "Merriweather Sans" !important; //'Poppins','SansSerif'
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none;
+}
+
+::selection {
+  color: #fff;
+  background: #629a8a;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+$primary-black: #3d3d3d;
+$banner: #008cff0d;
+$heading: #005799;
+$headingfont: #079de8;
+$border: #c6d7e9;
+$white: #ffffff;
+$second: #4275a9; //#079de8;
+$secondary: #1d1d1b;
+$primary: #f7f8fc;
+
+// <<---Color---palette---->>>>
+$primary1: #0a2342;
+$primary2: #629a8a;
+$primary3: #e2972e;
+$secondary1: #b6d1d4;
+$secondary2: #fffaf1;
+$label: #020e13;
+$pageBg: #f6f7f9;
+$third1: #54657b;
+$third2: #ced3d9;
+$third3: #a1c2b9;
+$third4: #e0ebe8;
+
+$fourth1: #f1cb97;
+$fourth2: #e2edee;
+
+$shadow: #54657b;
+// <<---Color---palette---->>>>
+
+$transition: all 0.3s ease-in-out;
+$mid: center;
+$ryt: right;
+$cap: capitalize;
+$upper: uppercase;
+$between: space-between;
+$flexend: flex-end;
+$flexstart: flex-start;
+$none: none;
+$hide: hidden;
+$auto: auto;
+$bold: bold;
+$bolder: bolder;
+$solid: solid;
+$grid: grid;
+$maxcontent: max-content;
+$rel: relative;
+$abs: absolute;
+$regular: "Merriweather Sans"; // "Poppins", sans-serif;
+$left: left;
+$right: right;
+$bold: 700;
+$semibold: 500;
+$darkblack: #020e13;
+$normalfont: 14px;
+$dheading: #b6d1d4;

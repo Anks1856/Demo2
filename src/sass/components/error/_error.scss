@@ -1,0 +1,81 @@
+.main_Error_Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .Error-Wrapper {
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0 13px 2px #54657b1a;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    h2 {
+      font-size: 5em;
+      text-transform: capitalize;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      font-family: "Good Times Rg";
+      font-weight: bolder;
+      // background-image: url(/src//image/lock.png);
+      background-image: url(/src/images/logo.png);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: Erroranime 15s linear infinite;
+      background-position-y: -182px;
+      width: max-content;
+      text-align: $mid;
+      margin: 0 auto;
+      @keyframes Erroranime {
+        from {
+          background-position: -300px;
+          transition: all 0.3s ease-in-out;
+          transform: scaleZ(1.3);
+        }
+        to {
+          background-position: 600px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &:hover {
+        animation-play-state: paused;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    h3 {
+      font-size: 1.2em;
+      text-transform: capitalize;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      margin: 0.5rem;
+      font-weight: 650;
+      text-transform: uppercase;
+      color: $primary1;
+    }
+    p {
+      font-size: 14px;
+      text-transform: capitalize;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      margin: 0.5rem;
+      color: $primary1;
+    }
+    a {
+      padding: 0.6rem 2rem;
+      margin: 1.5rem 0;
+      border-radius: 100px;
+      transition: all 0.3s ease-in-out;
+      background: $primary1;
+      color: #fff;
+      text-transform: $cap;
+      display: inline-block;
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        opacity: 0.77;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}

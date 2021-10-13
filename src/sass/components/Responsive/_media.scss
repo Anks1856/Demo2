@@ -1,0 +1,94 @@
+@media only screen and (max-width: 1920px) {
+  main {
+    .Main_Content_Wrapper {
+      // width: 86%;
+    }
+    // .Skew-Wrapper .Close-btn {
+    //     left: 137px !important;
+    //     top: 23px !important;
+    // }
+    .Skew-Wrapper .Main_Content_Wrapper {
+      width: 93%;
+      margin: 4.5rem 1rem 0 6.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  main {
+    .Main_Content_Wrapper {
+      // width: 79%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    header {
+      .Header-Content nav {
+        width: 78%;
+      }
+    }
+
+    .Skew-Wrapper {
+      .Main_Content_Wrapper {
+        // width: 93%;
+        margin: 4.5rem 1rem 0 4.2rem;
+        transition: all 0.3s ease-in-out;
+      }
+      .Header-Content nav {
+        width: 93%;
+      }
+      .Close-btn {
+        left: 18px !important;
+        top: 23px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .Login_Wrapper {
+    .Login_Body {
+      .Login_Content {
+        width: 90%;
+        height: 552px;
+        margin: 5rem auto 0;
+      }
+    }
+    .Login_header::before {
+      height: 80px;
+      bottom: -30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (max-width: 800px) {
+  .Login_Wrapper {
+    .Login_Body {
+      .Login_Content {
+        margin: 3rem auto 0;
+      }
+    }
+    .Login_header::before {
+      height: 60px;
+      bottom: -25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Login_Wrapper {
+    .Login_Body {
+      .Login_Content {
+        height: auto;
+      }
+    }
+    .Login_header::before {
+      height: 60px;
+      bottom: -30px;
+    }
+  }
+}
