@@ -58,6 +58,7 @@ module.exports = {
       width: {
         86: "86%",
         71: "71%",
+        form: "380px",
       },
       gridTemplateColumns: {
         gridTemp: "130px 1fr",

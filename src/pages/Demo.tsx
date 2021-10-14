@@ -100,10 +100,10 @@ const Demo = () => {
                           <br />
                           <Form.Item
                             name="product"
-                            className="w-full md:w-1/2 rounded-2xl"
+                            className="w-full rounded-2xl"
                             rules={[{ required: true }]}>
                             <Select
-                              className="w-full md:w-1/2 rounded-small border border-dark-shadow"
+                              className="w-full md:w-form rounded-small border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="product 1">Product 1</Option>
                               <Option value="product 2">Product 2</Option>
@@ -119,10 +119,10 @@ const Demo = () => {
                           <br />
                           <Form.Item
                             name="from"
-                            className="w-full md:w-1/2"
+                            className="w-full"
                             rules={[{ required: true }]}>
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="from1">from 1</Option>
                               <Option value="from2">from 2</Option>
@@ -138,10 +138,10 @@ const Demo = () => {
                           <br />
                           <Form.Item
                             name="strength"
-                            className="w-full md:w-1/2"
+                            className="w-full "
                             rules={[{ required: true }]}>
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="strength1">Strength 1</Option>
                               <Option value="strength2">Strength 2</Option>
@@ -154,9 +154,9 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Flavor:
                           </label>
-                          <Form.Item name="flavor" className="w-full md:w-1/2">
+                          <Form.Item name="flavor" className="w-full ">
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="flavor1">Flavor 1</Option>
                               <Option value="flavor2">Flavor 2</Option>
@@ -166,15 +166,13 @@ const Demo = () => {
                           </Form.Item>
                         </div>
 
-                        <div className="md:flex md:space-x-4 w-full ">
+                        <div className="md:flex md:space-x-4 w-full">
                           <label htmlFor="" className="text-right w-1/3">
                             Units Per Fill:
                           </label>
-                          <Form.Item
-                            name="unitPerPill"
-                            className="w-full md:w-1/2">
+                          <Form.Item name="unitPerPill" className="w-full">
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="unit1">Unit 1</Option>
                               <Option value="unit2">Unit 2</Option>
@@ -189,12 +187,10 @@ const Demo = () => {
                             Directions:
                           </label>
                           <br />
-                          <div className="flex  w-full md:w-1/2 mb-5 border border-dark-shadow">
-                            <Form.Item
-                              name="direction"
-                              className="w-full h-2 md:w-1/2">
+                          <div className="flex w-full mb-5 border border-dark-shadow">
+                            <Form.Item name="direction" className="w-full h-2">
                               <Select
-                                className="w-44 md:w-28 border-r border-dark-shadow"
+                                className="w-36 md:w-28 border-r border-dark-shadow"
                                 placeholder="Directions">
                                 <Option value="direction1">Direction 1</Option>
                                 <Option value="direction2">Direction 2</Option>
@@ -203,7 +199,7 @@ const Demo = () => {
                             </Form.Item>
                             <Form.Item
                               name="directionText"
-                              className="h-2 w-full ">
+                              className="h-2 w-full">
                               <Input
                                 type="text"
                                 placeholder=""
@@ -219,11 +215,9 @@ const Demo = () => {
                             Days Supply:
                           </label>
                           <br />
-                          <Form.Item
-                            name="daysSupply"
-                            className="w-full md:w-1/2 ">
+                          <Form.Item name="daysSupply" className="w-full">
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="1day"> 1 day</Option>
                               <Option value="2day">2 day</Option>
@@ -237,9 +231,9 @@ const Demo = () => {
                             Refills:
                           </label>
                           <br />
-                          <Form.Item name="refills" className="w-full md:w-1/2">
+                          <Form.Item name="refills" className="w-full">
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="refills1">Refills 1</Option>
                               <Option value="refills2">Refills 2</Option>
@@ -255,7 +249,7 @@ const Demo = () => {
                           <br />
                           <Form.Item
                             name="expiration"
-                            className="w-full md:w-1/2 border border-dark-shadow">
+                            className="w-full border border-dark-shadow">
                             <DatePicker className="w-full md:w-full " />
                           </Form.Item>
                         </div>
@@ -265,10 +259,10 @@ const Demo = () => {
                             Client Notification:
                           </label>
                           <br />
-                          <div className="flex w-full md:w-1/2 mb-5 border border-dark-shadow">
+                          <div className="flex w-full mb-5 border border-dark-shadow">
                             <Form.Item
                               name="clientNotification"
-                              className="w-full h-2 md:w-1/2 p-0">
+                              className="w-full h-2 md:w-form p-0">
                               <Select
                                 className="w-44 md:w-28 border-r border-dark-shadow"
                                 placeholder="Today">
@@ -292,9 +286,9 @@ const Demo = () => {
                           <br />
                           <Form.Item
                             name="autoShip"
-                            className="w-full md:w-1/2">
+                            className="w-full md:w-form">
                             <Select
-                              className="w-full md:w-1/2 border border-dark-shadow"
+                              className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
                               <Option value="yes">Yes</Option>
                               <Option value="no">No</Option>
@@ -306,10 +300,10 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Note to Pharmacy:
                           </label>
-                          <div className="flex w-full md:w-1/2 mb-5 border border-dark-shadow">
+                          <div className="flex w-full md:w-form mb-5 border border-dark-shadow">
                             <Form.Item
                               name="noteToPharmacy"
-                              className="w-full h-2 md:w-1/2">
+                              className="w-full h-2 md:w-form">
                               <Select
                                 className=" w-44 md:w-28 border-r border-dark-shadow"
                                 placeholder="Directions">
@@ -334,10 +328,10 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Note to Client:
                           </label>
-                          <div className="flex w-full md:w-1/2 mb-5 border border-dark-shadow">
+                          <div className="flex w-full md:w-form mb-5 border border-dark-shadow">
                             <Form.Item
                               name="noteToClient"
-                              className="w-full h-2 md:w-1/2">
+                              className="w-full h-2 md:w-form">
                               <Select
                                 className="w-44 md:w-28 border-r border-dark-shadow"
                                 placeholder="Directions">
@@ -361,7 +355,7 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Authorizing Vet:
                           </label>
-                          <div className="w-full md:w-1/2 mb-5 ">
+                          <div className="w-full md:w-form mb-5 ">
                             <Form.Item
                               name="authorizingVet"
                               className="md:w-full"
@@ -384,7 +378,7 @@ const Demo = () => {
                           <label
                             htmlFor=""
                             className="text-right w-1/3"></label>
-                          <div className="w-full md:w-1/2 ">
+                          <div className="w-full md:w-form ">
                             <div className="flex items-center justify-end">
                               <Form.Item
                                 label="Print Rx Details after Authorizing"
@@ -402,7 +396,7 @@ const Demo = () => {
                             htmlFor=""
                             className="text-right w-1/3 hidden md:block"></label>
                           <br />
-                          <div className="w-full md:w-1/2 ">
+                          <div className="w-full md:w-form ">
                             <div className="text-center flex justify-end space-x-6">
                               <Button
                                 htmlType="submit"
