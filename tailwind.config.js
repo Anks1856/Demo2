@@ -37,6 +37,9 @@ module.exports = {
           body: "#f6f7f9",
           transparent: "transparent!important",
         },
+        white: {
+          full: "#FFFFFF!important",
+        },
         orange: {
           light: "#FFFAF1",
           bold: " #E2972E",
