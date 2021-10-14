@@ -5,10 +5,10 @@ const { Option } = Select;
 const Demo = () => {
   const [formDetails, setFormDetails] = useState({});
 
-  // const handleFinish = (values) => {
-  //   // console.log(values);
-  //   setFormDetails(values);
-  // };
+  const handleFinish = (values: {}) => {
+    // console.log(values);
+    setFormDetails(values);
+  };
   console.log(formDetails);
 
   return (
@@ -90,7 +90,7 @@ const Demo = () => {
                   <div className="shadow-cus p-4 w-full rounded-small border">
                     <p className="text-xl font-semibold p-4">Prescription</p>
                     <div className=" text-lg font-semibold p-4 md:p-0">
-                      <Form>
+                      <Form onFinish={handleFinish}>
                         <div className="md:flex md:space-x-4 w-full">
                           <label
                             htmlFor=""
@@ -188,9 +188,11 @@ const Demo = () => {
                           </label>
                           <br />
                           <div className="flex w-full mb-5 border border-dark-shadow">
-                            <Form.Item name="direction" className="w-full h-2">
+                            <Form.Item
+                              name="direction"
+                              className="h-2 w-36 md:w-28 ">
                               <Select
-                                className="w-36 md:w-28 border-r border-dark-shadow"
+                                className="border-r border-dark-shadow"
                                 placeholder="Directions">
                                 <Option value="direction1">Direction 1</Option>
                                 <Option value="direction2">Direction 2</Option>
@@ -262,10 +264,10 @@ const Demo = () => {
                           <div className="flex w-full mb-5 border border-dark-shadow">
                             <Form.Item
                               name="clientNotification"
-                              className="w-full h-2 md:w-form p-0">
+                              className="h-2 p-0 w-36 md:w-28 ">
                               <Select
-                                className="w-44 md:w-28 border-r border-dark-shadow"
-                                placeholder="Today">
+                                className="border-r border-dark-shadow"
+                                placeholder="Directions">
                                 <Option value="today">Today</Option>
                                 <Option value="tommorow">Tommorow</Option>
                                 <Option value="dayAfter">day after T</Option>
@@ -284,9 +286,7 @@ const Demo = () => {
                             AutoShip Promt :
                           </label>
                           <br />
-                          <Form.Item
-                            name="autoShip"
-                            className="w-full md:w-form">
+                          <Form.Item name="autoShip" className="w-full">
                             <Select
                               className="w-full md:w-form border border-dark-shadow"
                               placeholder="Select a Product">
@@ -300,12 +300,12 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Note to Pharmacy:
                           </label>
-                          <div className="flex w-full md:w-form mb-5 border border-dark-shadow">
+                          <div className="flex w-full mb-5 border border-dark-shadow">
                             <Form.Item
                               name="noteToPharmacy"
-                              className="w-full h-2 md:w-form">
+                              className="h-2 w-44 md:w-28">
                               <Select
-                                className=" w-44 md:w-28 border-r border-dark-shadow"
+                                className="border-r border-dark-shadow"
                                 placeholder="Directions">
                                 <Option value="parmacy1">pharmacy 1</Option>
                                 <Option value="parmacy2">pharmacy 2</Option>
@@ -328,10 +328,10 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Note to Client:
                           </label>
-                          <div className="flex w-full md:w-form mb-5 border border-dark-shadow">
+                          <div className="flex w-full mb-5 border border-dark-shadow">
                             <Form.Item
                               name="noteToClient"
-                              className="w-full h-2 md:w-form">
+                              className="h-2 w-36 md:w-28">
                               <Select
                                 className="w-44 md:w-28 border-r border-dark-shadow"
                                 placeholder="Directions">
@@ -355,7 +355,7 @@ const Demo = () => {
                           <label htmlFor="" className="text-right w-1/3">
                             Authorizing Vet:
                           </label>
-                          <div className="w-full md:w-form mb-5 ">
+                          <div className="w-full mb-5 ">
                             <Form.Item
                               name="authorizingVet"
                               className="md:w-full"
@@ -378,7 +378,7 @@ const Demo = () => {
                           <label
                             htmlFor=""
                             className="text-right w-1/3"></label>
-                          <div className="w-full md:w-form ">
+                          <div className="w-full ">
                             <div className="flex items-center justify-end">
                               <Form.Item
                                 label="Print Rx Details after Authorizing"
@@ -396,7 +396,7 @@ const Demo = () => {
                             htmlFor=""
                             className="text-right w-1/3 hidden md:block"></label>
                           <br />
-                          <div className="w-full md:w-form ">
+                          <div className="w-full ">
                             <div className="text-center flex justify-end space-x-6">
                               <Button
                                 htmlType="submit"
