@@ -87,46 +87,36 @@ export const Login = () => {
             />
           </figure>
         </div>
+
         <svg
-          className="text-blue-dark fill-current w-full h-20"
+          className="text-blue-dark fill-current w-full h-6"
           viewBox="0 0 500 150"
           preserveAspectRatio="none">
           <path d="M-17.21,153.45 C205.13,12.33 238.99,-75.50 500.84,150.48 L500.00,0.00 L0.00,0.00 Z"></path>
         </svg>
+
         <div className="Login_Body">
-          <Row className="Login_Content p-0 bg-white w-10/12 h-55 mx-auto mt-16 rounded shadow-ct">
-            <Col
-              className="Login_Left Login-item-cmn flex items-center justify-center flex-wrap p-4 h-full"
-              xl={12}
-              lg={12}
-              md={12}
-              xs={24}>
-              <div className="Left-items items-child text-center py-16 px-8  w-10/12">
-                <figure className="Content_Logo">
-                  <img
-                    src={Data.logo2}
-                    alt="Rx logo"
-                    className="Logo2 object-cover my-0 mx-auto w-28"
-                  />
-                </figure>
-                <figcaption>
-                  <h1 className="py-4  font-extrabold uppercase text-green-dark font-bodyCommon text-4xl">
-                    {Data.welcome}
-                  </h1>
-                  <p className="font-bold m-0  text-2xl text-dark-textColor">
-                    {Data.p}
-                  </p>
-                </figcaption>
+          <div className="md:flex  p-0 bg-white w-10/12 h-55 mx-auto mt-16 rounded shadow-ct">
+            <div className="flex md:block md:w-1/2 md:mt-32 md:py-5 md:px-8 p-4 items-center justify-center shadow-md space-x-4 ">
+              <div className="text-center">
+                <img
+                  src={Data.logo2}
+                  alt="Rx logo"
+                  className="Logo2 object-cover my-0 mx-auto w-28"
+                />
               </div>
-            </Col>
-            <Col
-              className="Login_Right Login-item-cmn flex  items-center justify-center flex-wrap p-4 h-full bg-green-light w-full"
-              xl={12}
-              lg={12}
-              md={12}
-              xs={24}>
-              <div className="form_Wrapper items-child w-9/12">
-                <div className="Form_Heading mb-4">
+              <div className="md:text-center mt-10">
+                <h1 className="font-semibold  text-green-dark font-bodyCommon text-2xl md:py-4  md:font-extrabold uppercase md:text-green-dark md:font-bodyCommon md:text-5xl">
+                  {Data.welcome}
+                </h1>
+                <p className="font-base mt-5 text-lg text-dark-textColor md:font-bold md:m-0  md:text-3xl md:text-dark-textColor">
+                  {Data.p}
+                </p>
+              </div>
+            </div>
+            <div className="bg-green-light  md:w-1/2">
+              <div className="bg-green-light p-3 mt-0 sm:mt-16 md:px-16 md:mt-24">
+                <div className="my-2 text-center sm:text-left sm:my-4 ">
                   <h3 className="capitalize font-bold text-3xl pb-2">
                     {Data.LoginHeading}
                   </h3>
@@ -238,9 +228,10 @@ export const Login = () => {
                   </div>
                 </Form>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
+
         <footer className="Login_Footer my-20">
           <ul className="Login-foot_content flex flex-wrap py-5 pl-pleft  gap-4 bg-dark-textColor w-full">
             <li className="flex items-center justify-center flex-wrap w-max list-none text-white">
